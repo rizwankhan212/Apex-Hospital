@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Stories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: greenyellow;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #story-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+        .logo{
+            height: 20vh;
+            width: 10vw;
+            border: 2px solid transparent;
+            border-radius: 100px;
+            position: relative;
+            left: 5px;  
+            box-shadow: 1px 3px 10px #555;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo"
+        src="https://yt3.googleusercontent.com/ytc/AIf8zZQ4H-VVNMZR53hnbEabv4F05nHfUrXeUFGTA3y5Jg=s900-c-k-c0x00ffffff-no-rj"
+        alt="">
+        <h1>Recovery Stories</h1>
+    </header>
+
+    <section id="stories-container">
+        <!-- Display recovery stories here -->
+        <p>No stories available yet.</p>
+    </section>
+
+    <section id="story-form">
+        <h2>Share Your Story</h2>
+        <form id="new-story-form">
+            <label for="author">Your Name:</label>
+            <input type="text" id="author" required>
+<h2>---------------------------------------------------------------------------------------------------</h2>
+           <!-- </br> -->
+            <label for="story">Your Story:</label>
+            <textarea id="story" rows="4" required></textarea>
+  <h2>---------------------------------------------------------------------------------------------------</h2>
+           </br>
+            <button type="submit"bg-color:orange>Submit</button>
+        </form>
+    </section>
+
+    <button id="show-form-btn">Share Your Story</button>
+
+    <script>
+        const storiesContainer = document.getElementById('stories-container');
+        const storyForm = document.getElementById('story-form');
+        const showFormBtn = document.getElementById('show-form-btn');
+        const newStoryForm = document.getElementById('new-story-form');
+
+        showFormBtn.addEventListener('click', () => {
+            storyForm.style.display = 'block';
+            showFormBtn.style.display = 'none';
+        });
+
+        newStoryForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const author = document.getElementById('author').value;
+            const story = document.getElementById('story').value;
+
+            // Here you would typically send the data to a server and save it in a database.
+            // For simplicity, we'll just display the entered data for now.
+            displayStory(author, story);
+
+            // Clear the form
+            newStoryForm.reset();
+
+            // Hide the form after submission
+            storyForm.style.display = 'none';
+            showFormBtn.style.display = 'block';
+        });
+
+        function displayStory(author, story) {
+            const storyElement = document.createElement('div');
+            storyElement.innerHTML = `
+                <h3>${author}</h3>
+                <p>${story}</p>
+                <hr>
+            `;
+            storiesContainer.insertBefore(storyElement, storiesContainer.firstChild);
+        }
+    </script>
+</body>
+</html>

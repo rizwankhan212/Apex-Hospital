@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .foot {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .head {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .logo {
+            height: 20vh;
+            width: 10vw;
+            border: 2px solid transparent;
+            border-radius: 100px;
+            position: relative;
+            left: 30px;  
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img class="logo"
+                src="https://yt3.googleusercontent.com/ytc/AIf8zZQ4H-VVNMZR53hnbEabv4F05nHfUrXeUFGTA3y5Jg=s900-c-k-c0x00ffffff-no-rj"
+                alt="">
+        </div><br>
+        <h2>Fill Your Deatils</h2>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="username" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="no">Contact Number:</label>
+                <input type="number" id="no" name="no" required>
+            </div>
+            <div class="form-group">
+                <input type="date">
+            </div>
+            <div class="form-group">
+                Timing : <select name="Timing">
+                    <option value="9.00 am to 10. 00 am">9.00 am to 10.00 am</option>
+                    <option value="10.00 am to 11.00 am">10.00 am to 11.00 am</option>
+                    <option value="11.00 am to 12.00 pm">11.00 am to 12.00 pm</option>
+                    <option value="12.00 pm to 1.00 pm">12.00 pm to 1.00 pm</option>
+                    <option value="1.00 pm to 2.00 pm">1.00 pm to 2.00 pm</option>
+                    <option value="2.00 pm to 3.00 pm">2.00 pm to 3.00 pm</option>
+                    <option value="3.00 pm to 4.00 pm">3.00 pm to 4.00 pm</option>
+                    <option value="4.00 pm to 5.00 pm">4.00 pm to 5.00 pm</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Appointment</button>
+
+            </div>
+        </form><br>
+        <div class="foot">
+            for Patient only
+        </div>
+    </div>
+</body>
+
+</html>

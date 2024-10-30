@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 40px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .buy-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+        .logo {
+            height: 20vh;
+            width: 10vw;
+            border: 2px solid transparent;
+            border-radius: 100px;
+            position: relative;
+            left: 30px;  
+        }
+        h1{
+            position:relative;
+            left: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img class = "logo"src="https://yt3.googleusercontent.com/ytc/AIf8zZQ4H-VVNMZR53hnbEabv4F05nHfUrXeUFGTA3y5Jg=s900-c-k-c0x00ffffff-no-rj" height=100px width=100px align:center>
+        <!-- <h1>Apex hospital</h1> -->
+    </header>
+
+    <div class="product-container">
+        <div class="product-card">
+            <img src="e1.jpeg" width=200x height=200px>
+            <h3>Whisper</h3>
+            <p>
+             Baby Whisperer E.A.S.Y. Baby Routine Overview</p>
+            <p>RS.366</p>
+            <button class="buy-button" onclick="addToCart('Medicine 1', 10.99)">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="e2.jpeg" width=200x height=200px>
+            <h3>PAN 80</h3>
+            <p>smallpox medicine</p>
+            <p>RS.560</p>
+            <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="e3.jpeg" width=200x height=200px>
+            <h3>NECTOR</h3>
+            <p>cholera medicine</p>
+            <p>RS.342</p>
+            <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="e4.jpeg" width=200x height=200px>
+            <h3>Vitamin D3</h3>
+            <p>tuberculosis medicine</p>
+            <p>RS.1500</p>      
+                 <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="e5.jpeg" width=200x height=200px>
+            <h3>Revital</h3>
+            <p>syphilis medicine</p>
+            <p>Rs 1600</p>
+            <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="e6.jpeg" width=200x height=200px>
+            <h3>LIVEASY</h3>
+            <p>influenza medicine</p>
+            <p>RS.800</p>
+            <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="e7.jpeg" width=200x height=200px>
+            <h3>ECOSPRIN-75</h3>
+            <p>malaria medicine</p>
+            <p>RS.950</p>
+            <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="e8.jpeg" width=200x height=200px>
+            <h3>Bascan-10</h3>
+            <p>yellow fever medicine</p>
+            <p>RS.780</p>
+            <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="kpp.jpeg" width=200x height=200px>
+            <h3>ZICLA-M</h3>
+            <p>AIDS medicine</p>
+            <p>RS.900</p>
+            <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <img src="r2.jpeg" width=200x height=200px>
+            <h3>olson-15MD</h3>
+            <p>bubonic plague</p>
+            <p>RS.756</p>
+            <button class="buy-button" onclick="addToCart('Medicine 2', 12.99)">Buy Now</button>
+        </div>
+    </div>
+    <script>
+        function addToCart(productName, price) {
+            alert(`Added ${productName} to the cart. Total: $R${price}`);
+        }
+    </script>
+
+</body>
+</html>
